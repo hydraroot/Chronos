@@ -1,6 +1,7 @@
 <div align="center">
   <img src="chronos_icon.png" alt="Chronos neon hourglass icon" width="112" />
   <h1>Chronos</h1>
+  <p><strong>Created and maintained by WDS657</strong></p>
   <p><strong>A floating multi-timer for Windows 10 and Windows 11.</strong></p>
   <p>Keep multiple countdowns visible above your apps, label every timer, and get an audible alert when time is up.</p>
   <p><strong>Baseline release: 1.0</strong> · <a href="README.es.md">Leer en español</a></p>
@@ -165,3 +166,8 @@ Chronos runs locally and does not send timer data, notes, history, or settings t
 ## Contributing
 
 Bug reports, suggestions, and pull requests are welcome. Please describe the Windows version, Python version (if running from source), steps to reproduce, and relevant log messages. All changes should identify Chronos 1.0 as the baseline when derived from this release. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
+## Authorship and attribution
+
+**Original creator and project maintainer: WDS657.**

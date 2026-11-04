@@ -1,6 +1,7 @@
 <div align="center">
   <img src="chronos_icon.png" alt="Icono de reloj de arena neón de Chronos" width="112" />
   <h1>Chronos</h1>
+  <p><strong>Creado y mantenido por WDS657</strong></p>
   <p><strong>Temporizadores flotantes para Windows 10 y Windows 11.</strong></p>
   <p>Mantené varias cuentas regresivas visibles sobre tus aplicaciones, identificá cada reloj con un título y recibí una alarma sonora al terminar.</p>
   <p><strong>Versión base: 1.0</strong> · <a href="README.md">Read this in English</a></p>
@@ -137,6 +138,8 @@ Chronos guarda los datos del usuario en:
 Chronos no necesita una cuenta en línea ni servicios en la nube. Solo se requiere conexión para instalar paquetes de Python o herramientas de compilación cuando todavía no están disponibles.
 
 ## Autoría y atribución
+
+**Creador original y responsable del proyecto: WDS657.**
 
 **Creador original del proyecto y responsable de mantenimiento: WDS657**  
 El concepto del proyecto, la dirección del producto, el diseño de interfaz, los requisitos funcionales, la validación y el mantenimiento están a cargo de WDS657. La implementación se desarrolló con asistencia de herramientas de IA.
