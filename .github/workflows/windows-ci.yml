@@ -1,0 +1,54 @@
+name: Windows build check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install build dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt pyinstaller
+
+      - name: Check Python syntax
+        run: python -m py_compile chronos.py
+
+      - name: Build portable Windows application
+        shell: pwsh
+        run: |
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --noupx `
+            --name "Chronos" `
+            --icon "chronos.ico" `
+            --version-file "chronos_version.txt" `
+            --add-data "chronos.ico;." `
+            --add-data "chronos_icon.png;." `
+            --add-data "chronos_tray.png;." `
+            --collect-all PIL `
+            --hidden-import PIL._tkinter_finder `
+            chronos.py
+
+      - name: Package portable application
+        shell: pwsh
+        run: Compress-Archive -Path "dist/Chronos/*" -DestinationPath "Chronos-1.0-Windows-x64-unsigned.zip" -Force
+
+      - name: Upload unsigned build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Chronos-1.0-Windows-x64-unsigned
+          path: Chronos-1.0-Windows-x64-unsigned.zip
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,30 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# PyInstaller output
+build/
+dist/
+*.spec
+build_debug/
+dist_debug/
+
+# Local application data and diagnostics
+*.log
+chronos_alarm.wav
+timers.json
+history.json
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

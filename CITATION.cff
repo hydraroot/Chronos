@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use Chronos in research or other work, please cite the official repository and version 1.0."
+title: "Chronos"
+version: "1.0"
+license: "Apache-2.0"
+repository-code: "https://github.com/hydraroot/Chronos"
+authors:
+  - name: "WDS657"
